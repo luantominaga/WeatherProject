@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+
+
+
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+
+    <script type="text/javascript" src="node_modules/angular/angular.js"></script>
+
+  </head>
+
+
+<body >
+
+  <div class="container">
+
+      <br>
+      <br>
+      <h1><b>Consulta de tempo</b></h1>
+      <br>
+      <br>
+
+      <form ng-app="myapp" class="form-group mycontainer" ng-controller="MyModuleWeather">
+
+      <div><h3>Coloque o nome da cidade</h3></div>
+      <input class="form-control" type="text" ng-model="city" placeholder="Nome da cidade.."/></br>
+      <br>
+      <button class="btn btn-success " ng-click="show=true  ; change()">Previsão do tempo</button>
+      <div><br></div>
+      <div class="alert alert-success" role="alert" ng-show="show">
+      <h1><b>{{name}}</b></h1>
+
+      <h1>{{main.temp | number:0}} &#8451</h1>
+
+      <p>{{description | uppercase}}</p>
+      <br>
+      <p>Temperatura máxima máx: {{main.temp_max}} &#8451</p>
+      <p>Temperatura mínima: {{main.temp_min}} &#8451</p>
+      <p>Velocidade do vento: {{wind.speed}} m/s</p>
+
+      </div>
+      </form>
+
+  </div>
+
+  <!-- jQuery first, then Tether, then Bootstrap JS. -->
+
+  <script src="js/jquery-3.1.1.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
+  <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+  <script src="js/app.js"></script>
+  </body>
+  </html>
